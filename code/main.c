@@ -295,8 +295,8 @@ int main()
           __builtin_enable_interrupts();
           break;
         }
-      case 'm':								     // step
-        {											     // m and n are totaly same in c
+      case 'm':                     // step
+        {                           // m and n are totaly same in c
           NU32_ReadUART3(buffer,BUF_SIZE);
           sscanf(buffer, "%d", &track_array_length);
           for(i=0; i<track_array_length; i++){
@@ -305,7 +305,7 @@ int main()
           }
           break;
         }
-      case 'n':									 // cubic
+      case 'n':                     // cubic
         {
           NU32_ReadUART3(buffer,BUF_SIZE);
           sscanf(buffer, "%d", &track_array_length);
