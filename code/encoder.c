@@ -14,20 +14,20 @@ static int encoder_command(int read) { // send a command to the encoder chip
 }
 
 int encoder_counts(void) {
-	encoder_command(1);
+  encoder_command(1);
   return encoder_command(1);
 }
 
 int encoder_reset(void){
-	return encoder_command(0);
+  return encoder_command(0);
 }
 
 float encoder_deg(void){
-	encoder_command(1);
-	int counts = encoder_command(1);
-	float deg = 0.0;
+  encoder_command(1);
+  int counts = encoder_command(1);
+  float deg = 0.0;
   deg = (counts-32768)/4.0*360.0/484.0;
-	return deg;
+  return deg;
 }
 
 
