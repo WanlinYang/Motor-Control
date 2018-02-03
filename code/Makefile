@@ -14,7 +14,7 @@ TERMEMU=screen
 # and the harmony library.
 #
 # XC32PATH is the path to the xc32 bin directory. This directory contains
-# tools such as the compiler (xc32-gcc) and hex converter 
+# tools such as the compiler (xc32-gcc) and hex converter
 # (xc32-bin2hex)
 # Windows example (note the use of slashes not backslashes):
 # XC32PATH=C:/Program Files (x86)/Microchip/xc32/v1.40/bin
@@ -109,12 +109,12 @@ $(TARGET).elf : $(OBJS)
 .PHONY: clean
 # Erase all hex, map, object, and elf files.
 clean :
-	$(RM) *.hex *.map *.o *.elf *.dep *.dis       
+	$(RM) *.hex *.map *.o *.elf *.dep *.dis
 
 .PHONY: write
 # After making, call the NU32utility to program via bootloader.
 write : $(TARGET).hex $(TARGET).dis
-	$(WRITE) "$(PORT)" $(TARGET).hex 
+	$(WRITE) "$(PORT)" $(TARGET).hex
 
 .PHONY: putty
 putty :
